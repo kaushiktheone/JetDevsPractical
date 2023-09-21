@@ -15,6 +15,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {fetchUserList} from '../redux/handlers/usersHandler';
 import {addFavorite, removeFavorite} from '../redux/slices/favoriteSlice';
 import * as COLORS from '../utils/colors';
+import {isIOS} from '../utils/constant';
 
 interface UserData {
   cell: string;
@@ -111,10 +112,17 @@ const Home: React.FC = () => {
             style={styles.userImage}
           />
           <View>
-            <Text>{`${item?.name?.first} ${item?.name?.last}`}</Text>
+            <Text
+              style={{
+                fontSize: 16,
+                fontWeight: '500',
+              }}>{`${item?.name?.first} ${item?.name?.last}`}</Text>
             <View style={styles.locationContainer}>
               <Ionicons name="location" size={16} />
-              <Text>{`${item?.location?.city}, ${item?.location?.country}`}</Text>
+              <Text
+                style={{
+                  fontSize: 13,
+                }}>{`${item?.location?.city}, ${item?.location?.country}`}</Text>
             </View>
           </View>
         </View>
@@ -232,6 +240,7 @@ const styles = StyleSheet.create({
   locationContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginTop: isIOS ? 5 : 0,
   },
   favoriteIconContainer: {
     alignSelf: 'flex-start',

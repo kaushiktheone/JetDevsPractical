@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {View, TextInput, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import * as COLORS from '../utils/colors';
+import {isIOS} from '../utils/constant';
 
 interface CustomTextInputProps {
   err?: boolean;
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 0,
+    paddingVertical: isIOS ? 5 : 0,
     paddingHorizontal: 10,
     paddingLeft: 2,
     marginVertical: 10,
