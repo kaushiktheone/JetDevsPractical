@@ -1,79 +1,94 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Test Task
 
-# Getting Started
+This is a React Native project created as part of a test task. The project includes a simple mobile app with a login screen and a dashboard that contains two tabs: Home and Favorite.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Table of Contents
 
-## Step 1: Start the Metro Server
+- [Requirements](#requirements)
+- [Getting Started](#getting-started)
+- [Technical Stack](#technical-stack)
+- [Usage](#usage)
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Requirements
 
-To start Metro, run the following command from the _root_ of your React Native project:
+The test task required the following features and technologies:
 
-```bash
-# using npm
-npm start
+- **Screens**:
+  - Login screen with email and password fields.
+  - Dashboard screen with bottom navigation containing Home and Favorite tabs.
+- **Login Screen**:
+  - Validate user input and allow login with fixed credentials.
+- **Home Tab**:
+  - Fetch data from the Random User API.
+  - Implement pagination and pull-to-refresh.
+  - Display user profiles with name and optional details.
+  - Add a favorite/unfavorite functionality.
+- **Favorite Tab**:
+  - Display the list of favorite users.
+  - Allow marking users as unfavorite.
+- **Technical Specifications**:
+  - Redux for state management.
+  - React hooks for component logic.
+  - TypeScript for type-safe code.
+  - Random User API for data.
 
-# OR using Yarn
-yarn start
-```
+## Getting Started
 
-## Step 2: Start your Application
+To run this project on your local machine, follow these steps:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+1. Clone the repository:
 
-### For Android
+   ```bash
+   git clone https://github.com/kaushiktheone/JetDevsPractical.git
 
-```bash
-# using npm
-npm run android
+   npm install
+   npx react-native start
+   npx react-native run-ios
+   # OR
+   npx react-native run-android
+   ```
 
-# OR using Yarn
-yarn android
-```
+## Technical Stack
 
-### For iOS
+This project is built using the following technologies and libraries:
 
-```bash
-# using npm
-npm run ios
+- **Front-end**:
 
-# OR using Yarn
-yarn ios
-```
+  - React Native: A popular framework for building mobile applications using React.
+  - Redux: A state management library for managing application state.
+  - React Hooks: Functional components and hooks for managing component state and side effects.
+  - React Navigation: A navigation library for creating smooth navigation flows.
+  - Axios: A library for making API requests.
+  - TypeScript: A statically typed superset of JavaScript for improved code quality.
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+- **Styling**:
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+  - Global styles and themes for consistent design.
 
-## Step 3: Modifying your App
+- **Testing**:
 
-Now that you have successfully run the app, let's modify it.
+  - Extensive testing on iOS and Android simulators/emulators.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+- **Version Control**:
+  - Git: A distributed version control system used for tracking changes in the codebase.
+  - GitHub: A web-based platform for hosting and collaborating on Git repositories.
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+## Usage
 
-## Congratulations! :tada:
+Follow these steps to use the application:
 
-You've successfully run and modified your React Native App. :partying_face:
+1. **Login**:
 
-### Now what?
+   - Use the provided email (`reactnative@jetdevs.com`) and password (`jetdevs@123`) to log in.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+2. **Home Tab**:
 
-# Troubleshooting
+   - Scroll through the list of random users.
+   - Pull to refresh the user list to fetch the latest data.
+   - Mark users as favorites by tapping the favorite icon.
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+3. **Favorite Tab**:
+   - View your list of favorite users.
+   - Unfavorite users by tapping the unfavorite option.
 
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+These instructions will help you navigate and use the application's features effectively.
