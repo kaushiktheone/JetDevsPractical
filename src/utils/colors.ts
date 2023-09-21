@@ -1,0 +1,10 @@
+export const BLACK = '#000000';
+export const WHITE = '#FFFFFF';
+export const RED = '#FF0000';
+export const PRIMARY_COLOR = '#e12d6e';
+export const DARK_GREY = '#4C4C4C';
+export const HAWKE_BLUE = '#D7D8E0';
+export const WRITTEN_GRAY = '#696969';
+export const INITIAL_TXTINPUT = '#dcdde3';
+export const LOGIN_TXT = '#474747';
+export const BG_COLOR = '#f4f5fa';
