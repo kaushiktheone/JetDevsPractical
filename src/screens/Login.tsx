@@ -8,7 +8,6 @@ import {
   Alert,
   StatusBar,
 } from 'react-native';
-import {useDispatch} from 'react-redux';
 import {useForm, Controller} from 'react-hook-form';
 import CustomTextInput from '../components/CustomTextInput';
 import CustomButton from '../components/CustomButton';
@@ -18,8 +17,6 @@ import * as COLORS from '../utils/colors';
 const Login: React.FC = props => {
   const emailInputRef = useRef<any>(null);
   const passwordInputRef = useRef<any>(null);
-
-  const dispatch = useDispatch();
 
   const {
     control,

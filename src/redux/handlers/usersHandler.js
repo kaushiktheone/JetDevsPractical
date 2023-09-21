@@ -9,9 +9,9 @@ import * as apiHandler from './api';
 export const fetchUserList = pageNo => {
   return async dispatch => {
     if (pageNo > 1) {
-      dispatch(setLoader(true));
+      dispatch(setLoader(true)); // Loader for LoadMore
     } else {
-      dispatch(setLoading(true));
+      dispatch(setLoading(true)); // Loader for OnRefresh
     }
 
     const response = await apiHandler.fetchUserList(pageNo);

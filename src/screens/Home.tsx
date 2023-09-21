@@ -89,7 +89,7 @@ const Home: React.FC = () => {
   };
 
   const onRefresh = () => {
-    dispatch(fetchUserList(1));
+    dispatch(fetchUserList(0));
   };
 
   const handleLoadMore = () => {
